@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.page {
+  position: relative;
+  width: 100%;
+  min-height: 1305px; /* 955px (hero) + 767px (map) - 241px overlap */
+  background: #F9F9F7;
+}
+
+.hero {
+  position: absolute;
+  width: 95%;
+  height: 90vh;
+  left: 0;
+  top: 0px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: clamp(20px, 4vw, 50px) clamp(8px, 2.5vw, 30px);
+  padding-top: clamp(30px, 4vw, 60px);
+}
+
+.header {
+  font-family: 'Playfair Display', serif;
+  font-size: 120px;
+  font-weight: 400;
+  color: #2c2f24;
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 0;
+  line-height: 96px;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+   font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  color: #5c5c5c;
+  text-align: center;
+  margin-bottom: 48px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  width: 100%;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: clamp(30px, 4vw, 50px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8e8e8;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.formControl {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formControl.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2c2f24;
+  margin-bottom: 4px;
+}
+
+.optional {
+  font-weight: 400;
+  color: #9a9a9a;
+  font-size: 14px;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  border: 1px solid #dbdfd0;
+  border-radius: 12px;
+  padding: 16px 20px ;
+  padding-right: 50px;
+  font-size: 16px;
+  font-family: 'DM Sans', sans-serif;
+  color: #2c2f24;
+  background: #ffffff;
+  transition: all 0.2s ease;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: #9a9a9a;
+}
+
+.input:focus {
+  border-color: #ad343e;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(173, 52, 62, 0.1);
+}
+
+.inputError {
+  border-color: #ed4337 !important;
+}
+
+.inputError:focus {
+  border-color: #ed4337 !important;
+  box-shadow: 0 0 0 3px rgba(237, 67, 55, 0.15) !important;
+}
+
+.inputIcon {
+  position: absolute;
+  right: 20px;
+  color: #9a9a9a;
+  pointer-events: none;
+  font-size: 16px;
+}
+
+.select {
+  cursor: pointer;
+  background-image: none;
+}
+
+.textarea {
+  border: 1px solid #dbdfd0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-family: 'DM Sans', sans-serif;
+  color: #2c2f24;
+  background: #ffffff;
+  transition: all 0.2s ease;
+  width: 100%;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.textarea::placeholder {
+  color: #9a9a9a;
+}
+
+.textarea:focus {
+  border-color: #ad343e;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(173, 52, 62, 0.1);
+}
+
+.errorText {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #ed4337;
+  margin-top: 4px;
+}
+
+.cta {
+  grid-column: 1 / -1;
+  margin-top: 12px;
+  border: none;
+  background: #ad343e;
+  color: #ffffff;
+  border-radius: 118px;
+  padding: 20px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 100%;
+}
+
+.cta:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cta:not(:disabled):hover {
+  background: #8f1f29;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(173, 52, 62, 0.3);
+}
+
+.mapContainer {
+  position: absolute;
+  width: 100%;
+  height: 767px;
+  left: 0;
+  top: 565px;
+  z-index: 1;
+  background: #FFFFFF;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+  
+  .formControl.fullWidth {
+    grid-column: 1;
+  }
+  
+  .cta {
+    grid-column: 1;
+  }
+  
+  .hero {
+    height: auto;
+    min-height: 955px;
+    position: relative;
+    padding-bottom: 40px;
+  }
+  
+  .mapContainer {
+    position: relative;
+    top: 0;
+    height: 400px;
+    margin-top: 40px;
+  }
+  
+  .page {
+    min-height: auto;
+  }
+}

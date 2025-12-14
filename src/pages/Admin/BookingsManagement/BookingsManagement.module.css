@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.bookingsContainer {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #DBDFD0;
+}
+
+.sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 500;
+  color: #2c2f24;
+  margin: 0;
+}
+
+.count {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: #5c5c5c;
+  font-weight: 600;
+}
+
+.bookingsList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bookingCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid #DBDFD0;
+  transition: all 0.3s ease;
+}
+
+.bookingCard:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.bookingHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #DBDFD0;
+}
+
+.bookingTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #2c2f24;
+  margin: 0 0 8px 0;
+}
+
+.bookingDate {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #5c5c5c;
+}
+
+.statusBadge {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statusPending {
+  background: #fff4e6;
+  color: #d97706;
+  border: 1px solid #fbbf24;
+}
+
+.statusAccepted {
+  background: #d1fae5;
+  color: #059669;
+  border: 1px solid #10b981;
+}
+
+.statusRejected {
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #ef4444;
+}
+
+.bookingBody {
+  margin-bottom: 24px;
+}
+
+.bookingInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.infoLabel {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5c5c5c;
+}
+
+.infoValue {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c2f24;
+  word-break: break-word;
+}
+
+.bookingNotes {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f6f4ee;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.notesLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c2f24;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.notesValue {
+  font-size: 14px;
+  color: #5c5c5c;
+  line-height: 1.6;
+}
+
+.bookingActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 2px solid #DBDFD0;
+}
+
+.actionButton {
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+}
+
+.acceptButton {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.acceptButton:hover:not(:disabled) {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.rejectButton {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.rejectButton:hover:not(:disabled) {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.actionButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.statusMessage {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #5c5c5c;
+  font-style: italic;
+}
+
+/* Loading and Error States */
+.loading,
+.error {
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  color: #5c5c5c;
+  padding: 60px 20px;
+}
+
+.error {
+  color: #ad343e;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyState h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #2c2f24;
+  margin: 0 0 16px 0;
+}
+
+.emptyState p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  color: #5c5c5c;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .bookingHeader {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .bookingInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .bookingActions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actionButton {
+    width: 100%;
+  }
+}
+

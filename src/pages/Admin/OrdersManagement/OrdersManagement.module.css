@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.ordersContainer {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #DBDFD0;
+}
+
+.sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 500;
+  color: #2c2f24;
+  margin: 0;
+}
+
+.count {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: #5c5c5c;
+  font-weight: 600;
+}
+
+.ordersList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.orderCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid #DBDFD0;
+  transition: all 0.3s ease;
+}
+
+.orderCard:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #DBDFD0;
+}
+
+.orderTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #2c2f24;
+  margin: 0 0 8px 0;
+}
+
+.orderDate {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #5c5c5c;
+}
+
+.statusBadge {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statusPending {
+  background: #fff4e6;
+  color: #d97706;
+  border: 1px solid #fbbf24;
+}
+
+.statusAccepted {
+  background: #d1fae5;
+  color: #059669;
+  border: 1px solid #10b981;
+}
+
+.statusInProgress {
+  background: #dbeafe;
+  color: #0284c7;
+  border: 1px solid #3b82f6;
+}
+
+.statusDelivered {
+  background: #dcfce7;
+  color: #16a34a;
+  border: 1px solid #22c55e;
+}
+
+.statusRejected {
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #ef4444;
+}
+
+.orderBody {
+  margin-bottom: 24px;
+}
+
+.orderInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.infoLabel {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5c5c5c;
+}
+
+.infoValue {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c2f24;
+  word-break: break-word;
+}
+
+.orderItems {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #DBDFD0;
+}
+
+.itemsTitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c2f24;
+  margin-bottom: 16px;
+}
+
+.itemsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #f6f4ee;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.itemName {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2c2f24;
+}
+
+.itemQuantity {
+  font-size: 14px;
+  color: #5c5c5c;
+  margin: 0 16px;
+}
+
+.itemPrice {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ad343e;
+}
+
+.orderNotes {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f6f4ee;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.notesLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c2f24;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.notesValue {
+  font-size: 14px;
+  color: #5c5c5c;
+  line-height: 1.6;
+}
+
+.orderActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 2px solid #DBDFD0;
+}
+
+.statusButtons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.actionButton {
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+}
+
+.updateButton {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.updateButton:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.deliverButton {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.deliverButton:hover:not(:disabled) {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.rejectButton {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.rejectButton:hover:not(:disabled) {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.actionButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.statusMessage {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #5c5c5c;
+  font-style: italic;
+}
+
+/* Loading and Error States */
+.loading,
+.error {
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  color: #5c5c5c;
+  padding: 60px 20px;
+}
+
+.error {
+  color: #ad343e;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyState h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #2c2f24;
+  margin: 0 0 16px 0;
+}
+
+.emptyState p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  color: #5c5c5c;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .orderHeader {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .orderInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .orderActions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .statusButtons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .actionButton {
+    width: 100%;
+  }
+}
+

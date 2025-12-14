@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.header {
+  width: 100%;
+}
+
+/* Top Bar */
+.topBar {
+  background-color: #474747;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 200;
+  padding: 10px clamp(20px, 6vw, 96px);
+}
+
+.topBarInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.topBar .left span {
+  margin-right: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.leftContainer {
+  margin-left: 80px;
+}
+
+.topBar .right svg {
+  margin-left: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rightContainer {
+  margin-right: 80px;
+}
+
+.topBar .right svg:hover {
+  transform: scale(1.2);
+}
+
+/* Main Navbar */
+.mainNav {
+  font-family: "Playfair Display", serif;
+  background-color: white;
+  padding: 24px clamp(20px, 6vw, 96px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.mainNavInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  position: relative;
+}
+
+.logoGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.logo {
+  font-size: 42.67px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #474747;
+  letter-spacing: -.4px;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex: 1;
+  min-width: 0;
+  margin-right: 80px;
+
+}
+
+.navLinks a,
+.navLink {
+  margin: 0;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 6px 16px;
+  border-radius: 34px;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.navLinks a:hover,
+.navLink:hover {
+  background-color: #DBDFD0;
+  color: #1b1b1b;
+}
+
+.navLink.active {
+  background-color: #DBDFD0;
+  color: #1b1b1b;
+  font-weight: 600;
+}
+
+
+.bookBtn {
+  border: 1.5px solid #333;
+  background: transparent;
+  border-radius: 118px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  transition: 0.2s;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 48px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.bookBtn:hover {
+  background-color: #AD343E;
+  border: 1.5px solid #ffffff;
+  color: white;
+}
+
+.rightActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profileBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid #333;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.profileBtn:hover {
+  background-color: #AD343E;
+  border-color: #AD343E;
+  color: white;
+  transform: scale(1.05);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.logoContainer img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.mobileActions {
+  display: none;
+  align-items: center;
+  gap: 12px;
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.menuToggle span {
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  transition: transform 0.2s ease-out;
+}
+
+.profileBtnMobile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid #333;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.profileBtnMobile:hover {
+  background-color: #AD343E;
+  border-color: #AD343E;
+  color: white;
+  transform: scale(1.05);
+}
+.active {
+  background-color: #AD343E !important;
+  color: #ffffff !important;
+}
+
+.sign{
+  color: #AD343E !important;
+}
+.sign:hover {
+  background-color: #AD343E !important;
+  color: #ffffff !important;
+}
+.navLink.sign.active {
+  background-color: #AD343E !important;
+  color: #ffffff !important;
+}
+.navLink.sign.active:hover {
+  background-color: #8f1f29 !important;
+  color: #ffffff !important;
+}
+
+
+@media (max-width: 1200px) {
+  .mobileActions {
+    display: flex;
+  }
+
+  .menuToggle {
+    display: flex;
+  }
+
+  .mainNavInner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .logoGroup {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logoContainer {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .logo {
+    font-size: clamp(28px, 6vw, 42.67px);
+  }
+
+  .logoContainer img {
+    width: clamp(36px, 6vw, 48px);
+    height: clamp(36px, 6vw, 48px);
+  }
+
+  .navLinks {
+    position: static;
+    width: 100%;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    border-radius: 24px;
+    box-shadow: none;
+    border: 1px solid #ececec;
+    display: none;
+    order: 3;
+  }
+
+  .navLinks a,
+  .navLink {
+    width: 100%;
+    padding: 12px 16px;
+    justify-content: flex-start;
+    border-radius: 12px;
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .rightActions {
+    display: none;
+  }
+  
+  .bookBtn {
+    display: none;
+  }
+  
+  .profileBtn {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .topBar {
+    padding: 8px clamp(16px, 4vw, 48px);
+  }
+
+  .topBarInner {
+    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .topBar .left span {
+    margin-right: 16px;
+    font-size: 13px;
+  }
+
+  .topBar .right svg {
+    margin-left: 12px;
+    font-size: 14px;
+  }
+
+  .mainNav {
+    padding: 20px clamp(16px, 4vw, 48px);
+  }
+}
+
+
+@media (max-width: 640px) {
+  .topBar {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .topBarInner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  .topBar .left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .topBar .left span {
+    margin-right: 0;
+    font-size: 11px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .topBar .left span svg {
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  .topBar .right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .topBar .right svg {
+    margin-left: 0;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .mainNav {
+    padding: 16px;
+  }
+
+  .logoGroup {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: clamp(24px, 5vw, 36px);
+  }
+
+  .logoContainer img {
+    width: clamp(32px, 5vw, 40px);
+    height: clamp(32px, 5vw, 40px);
+  }
+
+  .mobileActions {
+    gap: 8px;
+  }
+
+  .profileBtnMobile {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+}
+

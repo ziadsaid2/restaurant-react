@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.footer {
+  background-color: #3b3b3b;
+  color: #f5f5f5;
+  padding: 72px 0 28px;
+}
+
+.inner {
+  width: min(1200px, 90vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) repeat(2, minmax(0, 1fr)) minmax(0, 1.4fr);
+  gap: 40px;
+}
+
+.brand p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #dedede;
+  margin-top: 18px;
+}
+
+.logoWrap {
+  font-family: 'Playfair Display', serif;
+  font-style:  italic;
+  letter-spacing: -0.4px;
+  line-height: 29.33px;
+  font-size: 32.67px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.brandDescription {
+  font-family: 'DM Sans', sans-serif !important;
+  font-style: regular !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  color: #ADB29E !important;
+  width: 350px;
+}
+
+.linksColumnTitle {
+  font-family: 'DM Sans', sans-serif !important;
+  font-style: bold !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  color: #fff !important;
+}
+.logoWrap img {
+  width: 48px;
+  height: 48px;
+}
+
+.socials {
+  margin-top: 26px;
+  display: flex;
+  gap: 12px;
+}
+
+.socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #AD343E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: background-color 0.2s ease-out;
+}
+
+.socials a:hover {
+  background-color: #f45c43;
+}
+
+.linksColumn h4,
+.instagram h4 {
+  margin-bottom: 24px !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-style: medium !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+}
+
+.linksColumn ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linksColumn a {
+  font-family: 'DM Sans', sans-serif !important;
+  font-style: regular !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 200 !important;
+  margin-bottom: 16px !important;
+  color: #DBDFD0 !important;
+  text-decoration: none;
+  transition: color 0.2s ease-out;
+}
+
+.linksColumn a:hover {
+  color: #f45c43 !important;
+}
+
+.instagramGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 110px);
+  gap: 14px;
+}
+
+.instagramGrid img {
+  width: 110px;
+  height: 110px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.bottomRow {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #cacaca;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 1024px) {
+  .topRow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .instagramGrid {
+    grid-template-columns: repeat(2, 100px);
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .inner {
+    width: min(520px, 92vw);
+  }
+
+  .topRow {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .instagramGrid {
+    grid-template-columns: repeat(2, 86px);
+    gap: 10px;
+  }
+}

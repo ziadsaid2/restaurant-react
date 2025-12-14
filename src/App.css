@@ -1,0 +1,22 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f1ea;
+  font-family: 'Poppins', 'Cairo', sans-serif;
+}
+
+main {
+  flex: 1;
+}
+
+/* Custom Toast Styles */
+.Toastify__toast-container {
+  top: 2rem !important;
+}
+
+.Toastify__toast {
+  border-radius: 8px !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 15px !important;
+}
