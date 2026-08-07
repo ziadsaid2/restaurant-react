@@ -1,16 +1,24 @@
-# React + Vite
+# Restaurant — Web Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React front end for the restaurant management system: browsing the menu, placing orders, booking a table, and an admin area for staff.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React · Vite · Context API for auth and session state
 
-## React Compiler
+## Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `pages` — routed screens
+- `components` — shared UI
+- `context` — auth and global state
+- `api` — HTTP layer talking to the NestJS backend
+- `utils` — helpers
 
-## Expanding the ESLint configuration
+## Running locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Expects the API from [restaurant-api](https://github.com/ziadsaid2/restaurant-api) to be running.
